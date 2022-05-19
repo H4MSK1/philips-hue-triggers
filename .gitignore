@@ -1,0 +1,14 @@
+.DS_STORE
+.eslintcache
+
+/dist
+/node_modules
+
+coverage
+npm-debug.log
+npm-debug.log*
+yarn-error.log*
+junit.xml
+package-lock.json
+
+*.tsbuildinfo

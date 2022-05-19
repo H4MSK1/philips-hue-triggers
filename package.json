@@ -1,0 +1,41 @@
+{
+  "name": "philips-hue-triggers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/main.ts",
+    "build": "tsc",
+    "lights:on": "node dist/main.js --state=on",
+    "lights:off": "node dist/main.js --state=off",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@q42philips/hue-color-converter": "^1.0.0",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.0",
+    "@types/node": "^16.4.14",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "axios-mock-adapter": "^1.20.0",
+    "eslint": "^8.14.0",
+    "husky": "^7.0.4",
+    "jest": "^27.0.6",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.0.4",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.3.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
